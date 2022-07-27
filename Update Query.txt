@@ -1,0 +1,54 @@
+
+var billamt=0;
+var prodamt,index,pr,cartdiv;
+var count=0;
+var countarray=new Array();
+purchaseButtonFn=(ButtonID)=>{
+  document.getElementById(ButtonID).onclick=function()
+  {
+    alert("Added to cart")
+    count+=1;
+    index=Number(ButtonID.substring(3));
+    if(countarray[index]==undefined){
+      countarray[index]=0;
+    }
+    var subtotal=0;
+    countarray[index]+=1;
+    console.log(countarray[index]);
+    console.log("index: "+index);
+    ProductName=womenProduct[index].productname;
+    prodamt=Number(document.getElementById(ButtonID).value)
+    subtotal=countarray[index]*prodamt;
+    billamt=billamt+subtotal;
+    var p1= document.createElement("p");
+    var p2= document.createElement("p");
+    var p3= document.createElement("p");
+    p1.innerHTML=ProductName;
+    p2.innerHTML="₹"+subtotal;
+    p3.innerHTML=countarray[index];
+    var itemcount= document.getElementById("itemcount");
+    var prodrow=document.getElementById("productrow");
+    var pricerow=document.getElementById("pricerow");
+    var totalamt = document.getElementById("totalamt");
+    var quantityrow = document.getElementById("quantityrow");
+    
+    itemcount.innerHTML=count;
+    prodrow.append(p1);
+    pricerow.append(p2); 
+    quantityrow.append(p3);   
+    totalamt.innerHTML="₹"+billamt;
+
+    auth.onAuthStateChanged(function(user){
+    if(user){
+      emailid = user.email;
+      userID=user.uid;
+      firebase.database().ref('Customers/'+userID).set({
+        Email:emailid,
+        BillAmt:billamt
+      })    
+      firebase.database().ref('Customers/'+userID+'/Products/'+ProductName).set({
+        Price:womenProduct[index].price
+      })
+    }});
+  }
+}

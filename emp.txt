@@ -1,0 +1,8 @@
+ <div id="formContainer"> 
+              <div id="header"> </div>
+              <input type="email" placeholder="Enter your email" id="email"/>
+              <input type="password" placeholder="Enter your Password" id="password"/>
+              <button onclick="signup()" id="signUp"> Sign Up </button>
+              <button onclick="signin()" id="signIn"> Sign In </button>
+              <button onclick="signout()" id="signOut"> Sign Out</button>
+            </div>

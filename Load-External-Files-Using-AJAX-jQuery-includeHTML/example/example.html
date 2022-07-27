@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="../jquery.includeHTML.min.js"></script>
+<!-- NOTES: This plugin require jQuery and Ajax -->
+<!-- NOTES: There are totally 6 functions are provided in this plugin -->
+<!-- .loadHTML(Path);			is to load external HTML file as html format into your element --->
+<!-- .appendHTML(Path);			is to add external HTML file as html format into the end of your element --->
+<!-- .prependHTML(Path);		is to add external HTML file as html format into the front of your element --->
+<!-- .loadTEXT(Path);			is to load external TXT file as pure text format into your element --->
+<!-- .appendTEXT(Path); 		is to add external TXT file as pure text format into the end of your element --->
+<!-- .prependTEXT(Path);		is to add external TXT file as pure text format into the front of your element --->
+<!-- All functions require your EXTERNAL HTML FILE PATH in the bracket -->
+
+<script>
+function loadFile1() {
+	$("#container").loadHTML("a.html");
+}
+function loadFile2() {
+	$("#container").appendHTML("b.html");
+}
+function loadFile3() {
+	$("#container").prependTEXT("b.html");
+}
+</script>
+<title>jQuery includeHTML.js Plugin Example</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/superhero/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/loading/Load-External-Files-Using-AJAX-jQuery-includeHTML/">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="container" style="margin:150px auto;">
+<h3>jQuery includeHTML.js Plugin Example</h3>
+<div id="container" class="well" style="margin:30px auto;"></div>
+<button onclick="loadFile1()" class="btn btn-primary">load a.html</button>
+<button onclick="loadFile2()" class="btn btn-danger">Add b.html</button>
+<button onclick="loadFile3()" class="btn btn-info">Pre-add b.html as text</button>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</head>
+</html>

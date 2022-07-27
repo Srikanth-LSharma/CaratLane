@@ -1,0 +1,7 @@
+{
+  "name": "jquery.includeHTML",
+  "version": "1.0.2",
+  "main": "jquery.includeHTML.js",
+  "dependencies": {},
+  "devDependencies": {}
+}
